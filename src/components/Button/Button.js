@@ -16,6 +16,10 @@ const Button = styled.button`
         opacity: 0.6;
     }
     cursor: pointer;
+
+    @media (max-width: 599px) {
+        margin-top: 20px;
+    }
 `;
 
 export default Button;
