@@ -30,6 +30,15 @@
       align-items: center;
       width: 85%;
     }
+
+    @media (min-width: 600px) and (max-width: 900px) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      grid-template-areas: "login images";
+      grid-template-columns: 1fr 1fr;      
+      width: 85%;
+    }
   `;
 
   const Login = styled.div`
@@ -113,12 +122,52 @@
         margin: 10px;
       }
     }
+
+    @media (min-width: 600px) and (max-width: 900px) {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      margin-left: 60px;
+
+      img {
+        width: 200px;
+        height: 100%;
+        margin: 0 0 40px 0;
+      }
+
+      .welcome-div {
+        display: flex;
+        align-items: center;
+        margin-left: 0;
+      }
+
+      .welcome {
+        color: #8b8b8b;
+        font-family: 'Advent Pro', sans-serif;
+        font-weight: 700;
+        font-size: 22px;
+      }
+
+      .painel {
+        color: #FF6C22;
+        font-family: 'Advent Pro', sans-serif;
+        font-weight: 700;
+        font-size: 25px;
+        margin-left: 5px;
+      }
+
+      form {
+        width: 60%;
+        margin-left: 0;        
+      }      
+    } 
   `;
 
   const Image = styled.div`
     border-radius: 5px;
     height: 512px;
     position: relative;
+
     .background {
       width: 390px;
       height: 100%;    
@@ -147,7 +196,25 @@
       }
     }
 
-    
+    @media (min-width: 600px) and (max-width: 900px) {
+      display: flex;
+      position: relative;
+
+      .background {
+      width: 320px;
+      height: 100%;    
+      position: absolute;
+      right: 0;
+      border-radius: 0 5px 5px 0;
+      }
+      .notebook {
+        width: 320px;
+        height: 320px;
+        position: absolute;
+        bottom: 0;
+        right: 45px;
+      }
+    }            
   `;
 
   export default function App() {
