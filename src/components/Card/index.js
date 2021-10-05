@@ -2,7 +2,6 @@ import styled from "styled-components";
 import paisage from '../../assets/images/image-ref.png';
 import lastSeen from '../../assets/images/Frame.png'
 
-
 const UserName = styled.div`
     display: flex;
     margin: 40px 0 20px 45px;
@@ -19,6 +18,14 @@ const UserName = styled.div`
         font-weight: 700;
         margin: 10px 5px;
     }
+
+    @media (max-width: 599px) {
+        margin: 20px 0 20px -25px;
+    }
+
+    @media (min-width: 600px) and (max-width: 900px) {
+        margin-left: 20px;
+    }
 `;
 
 const EndSection = styled.div`
@@ -27,12 +34,30 @@ const EndSection = styled.div`
     hr {
         border: solid 1px #d9d9d9;
     }
+    @media (max-width: 599px) {
+        margin-left: -60px;
+        width: 100%;
+    }
+
+    @media (min-width: 600px) and (max-width: 900px) {
+        width: 90%;
+        margin-left: 20px;
+    }
 `;
 
 const Cards = styled.div`
     display: flex;
     flex-wrap: wrap;
     margin-left: 40px;
+
+    @media (max-width: 599px) {
+        margin-left: -145px;
+    }
+
+    @media (min-width: 600px) and (max-width: 900px) {
+        margin-left: 20px;
+    }
+
 `;
 
 const DivCard = styled.div`
@@ -75,7 +100,6 @@ const DivCard = styled.div`
         background-color: rgba(0, 0, 0, 0.5);
         border-radius: 5px;
         position: absolute;
-        z-index: 12;
         top: 25px;
         right: 30px;  
 
@@ -93,6 +117,50 @@ const DivCard = styled.div`
             position: absolute;
             top: -3px;
             right: 15px;
+        }
+    }
+
+    @media (max-width: 599px) {
+        width: 330px;   
+        height: 255px;
+        margin-left: 5px;
+     
+        img {
+            width: 300px;
+            height: 125px;
+            margin: 15px;        
+        }
+
+        .title-card {
+            font-size: 12px;
+            font-weight: 700;
+            margin: 10px;
+        }
+        .subtitle-card {
+            font-size: 10px;
+            font-weight: 400;
+            margin: 10px;
+        }
+
+        .images {
+            width: 200px;
+        }
+
+        .visual {
+            top: 25px;
+            right: -100px;
+        }
+        
+    }
+
+    @media (min-width: 600px) and (max-width: 900px) {
+        width: 400px;
+        height: 250px;
+
+        img {
+            width: 360px;
+            height: 130px;
+            margin: 15px 15px 15px 20px;        
         }
     }
     
