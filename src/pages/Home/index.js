@@ -4,6 +4,7 @@ import tropaLogo from '../../assets/images/tropa-logo.png';
 import { ReactComponent as startsLogo} from '../../assets/images/home.svg';
 import { ReactComponent as contactsLogo} from '../../assets/images/contacts.svg';
 import { ReactComponent as reportsLogo} from '../../assets/images/reports.svg';
+import Card from '../../components/Card';
 
 const Sidebar = styled.div`
     background: #fff;
@@ -88,12 +89,12 @@ const ContactsIcon = styled(contactsLogo)`
 const Section = styled.section`
     background-color: #F3F3F3;
     width: 100%;
+    display: flex;
 `;
 
-/*const Main = styled.div`
-    width: 100%;
-    
-`;*/
+const Main = styled.div`
+    width: 100%;    
+`;
 
 function Home() {
     return (
@@ -130,7 +131,11 @@ function Home() {
                 </Button>       
                 </div>
             </Sidebar>
-                    
+            <Main>
+                <Card>
+
+                </Card>
+            </Main>                    
         </Section>
         
     );
