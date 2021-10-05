@@ -26,6 +26,10 @@ const Sidebar = styled.div`
         flex-direction: column;
         align-items: flex-end;        
     }
+
+    .button {
+        margin-top: 10px;
+    }
 `;
 
 const Button = styled.button`
@@ -93,17 +97,19 @@ const Section = styled.section`
 `;
 
 const Main = styled.div`
-    width: 100%;    
+    width: 80%;    
 `;
 
 function Home() {
     return (
         <Section>
             <Sidebar>
-                <Link to={"/"}>
-                    <img src={tropaLogo} alt="Logo Tropa Digital" className="logoTropa" />
-                </Link>
                 <div>
+                <Link to={"/"}>
+                    <img src={tropaLogo} alt="Logo Tropa Digital" className="logoTropa" />                
+                </Link>    
+                </div>
+                <div className="button">
                 <Button>
                     <StartLogo />
                     Início
@@ -133,7 +139,6 @@ function Home() {
             </Sidebar>
             <Main>
                 <Card>
-
                 </Card>
             </Main>                    
         </Section>
