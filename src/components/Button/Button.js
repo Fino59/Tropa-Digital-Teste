@@ -8,7 +8,7 @@ const Button = styled.button`
     border-radius: 5px;
     border: none;
     color: #fff;
-    font-family: 'Roboto', sans-serif;
+    font-family: ${props => props.fontFamily || "'Roboto', sans-serif;"};
     font-size: 14px;
     font-weight: 700;
     transition: ease-in-out 200ms;
