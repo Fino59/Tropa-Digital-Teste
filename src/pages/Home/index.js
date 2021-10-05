@@ -5,6 +5,7 @@ import { ReactComponent as startsLogo} from '../../assets/images/home.svg';
 import { ReactComponent as contactsLogo} from '../../assets/images/contacts.svg';
 import { ReactComponent as reportsLogo} from '../../assets/images/reports.svg';
 import Card from '../../components/Card';
+import Navbar from "../../components/Navbar";
 
 const Sidebar = styled.div`
     background: #fff;
@@ -29,6 +30,24 @@ const Sidebar = styled.div`
 
     .button {
         margin-top: 10px;
+    }
+
+    @media (max-width: 599px) {
+        visibility: hidden;
+
+        div {
+            width: 100px;
+        }
+
+        .logoTropa {
+            width: 100px;
+            height: 28px;
+            margin: 30px 10px 0 10px;
+        }
+
+        .button {
+        margin-top: 5px;
+    }
     }
 `;
 
@@ -56,7 +75,12 @@ const Button = styled.button`
     margin: 10px;
 
     @media (max-width: 599px) {
-        margin-top: 20px;
+        margin: 20px 0 0 0;
+        width: 105px;
+        height: 25px;
+        &:hover {
+            width: 100px;
+        }
     }
 `;
 
@@ -94,10 +118,13 @@ const Section = styled.section`
     background-color: #F3F3F3;
     width: 100%;
     display: flex;
+
 `;
 
 const Main = styled.div`
-    width: 80%;    
+    @media (max-width: 599px) {
+        width: 100%;        
+    }
 `;
 
 function Home() {
@@ -137,6 +164,7 @@ function Home() {
                 </Button>       
                 </div>
             </Sidebar>
+            <Navbar />
             <Main>
                 <Card>
                 </Card>
